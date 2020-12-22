@@ -1,0 +1,178 @@
+@import url(https://fonts.googleapis.com/css?family=Quicksand);
+
+/**
+ * Color scheme
+ *
+ * Light (Ghost White): #F7F7FF
+ * Dark (Jet gray): #343434
+ * Red (Bright Rusty red): #D52941
+ * Blue (Munsell): #348AA7
+ * Yellow (Light Naples Yellow): #FFE66D
+ */
+
+:root {
+    --main-colorschema-bg: #F7F7FF;
+    --main-colorschema-fg: #343434;
+    --main-colorschema-red: #D52941;
+    --main-colorschema-blue: #348AA7;
+    --main-colorschema-yellow: #FFE66D;
+}
+
+/* General */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-colorschema-bg);
+    color: var(--main-colorschema-fg);
+    font-family: Quicksand, sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+a {
+    color: inherit;
+}
+
+.right {
+    text-align: right;
+}
+
+.dark {
+    color: var(--main-colorschema-bg);
+    background-color: var(--main-colorschema-fg);
+}
+
+/* Content */
+
+section {
+    align-items: stretch;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    text-align: left;
+    overflow-x: hidden;
+}
+
+section > div {
+    padding: 3rem 3rem 3rem 3rem;
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin: 0 auto;
+    width: 31.5rem;
+    max-width: 50%;
+}
+
+footer {
+    text-align: center;
+}
+
+/** Headers */
+
+h1, h2 {
+    font-weight: 300;
+    line-height: 1.375;
+    letter-spacing: -0.02em;
+    margin: 0 0 1rem 0;
+}
+
+h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2.25rem;
+}
+
+/* Lists */
+
+ul {
+    list-style: disc;
+    margin: 0 0 2rem 0;
+    padding-left: 1rem;
+}
+
+ul li {
+    padding-left: 0.5rem;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 1680px) {
+    html {
+        font-size: 14pt;
+    }
+
+    section {
+        padding: 5rem 5rem 3rem 5rem;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    html {
+        font-size: 12pt;
+    }
+
+    section {
+        padding: 4rem 4rem 2rem 4rem;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    section {
+        padding: 3.75rem 3rem 1.75rem 3rem;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    html {
+        font-size: 11pt;
+    }
+
+    section {
+        padding: 2rem 2rem 0.5rem 2rem;
+        align-items: flex-start;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    html, body {
+        min-width: 320px;
+        font-size: 10pt;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    section {
+        align-items: center;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    section > div {
+        max-width: 100%;
+    }
+
+    .right {
+        text-align: center;
+    }
+}
