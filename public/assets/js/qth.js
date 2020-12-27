@@ -26,7 +26,7 @@
 
     };
 
-    if ('geolocation' in window) {
+    if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(calcQTH);
     } else {
         qth.innerHTML = "Geolocation is not supported by this browser.";
