@@ -116,7 +116,7 @@ textarea {
 
 .tabs-header > li {
     color: var(--main-colorschema-bg);
-    border: 1px solid var(--main-colorschema-fg);
+    border: 1px solid var(--main-colorschema-bg);
     cursor: pointer;
     flex-grow: 1;
     padding: .375rem;
@@ -129,6 +129,7 @@ textarea {
 .tabs-header > li.active {
     background-color: var(--main-colorschema-bg);
     color: var(--main-colorschema-fg);
+    border: 1px solid var(--main-colorschema-fg);
 }
 
 .tabs {
