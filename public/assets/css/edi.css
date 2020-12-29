@@ -4,14 +4,14 @@
  * Color scheme
  *
  * Light (Cadet Gray): #93A3B1
- * Dark (Rich Black FOGRA 29): #051923
+ * Dark (Rich Black FOGRA 29): #010513
  * Red (Ruby Red): #A31621
  * Green (Ao English): #157F1F
  * Yellow (Maximum Yellow Red): #FFC857
  */
 
 :root {
-    --main-colorschema-bg: #051923;
+    --main-colorschema-bg: #010513;
     --main-colorschema-fg: #93A3B1;
     --main-colorschema-red: #A31621;
     --main-colorschema-green: #157F1F;
@@ -37,26 +37,56 @@ html, body {
     font-family: Quicksand, sans-serif;
 }
 
-body {
-    justify-content: center
-}
-
 a {
     color: inherit;
     text-decoration: none;
 }
 
-header {
-    margin-bottom: 2em;
-}
-
-footer {
-    margin-top: 2em;
+header, footer {
+    margin: 2em;
+    text-align: center;
 }
 
 /* Wrapper and content */
 .wrapper {
     width: 95%;
-    max-width: 950px;
+    max-width: 1000px;
     margin: 0 auto;
+}
+
+/* Tabs */
+.tabs-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.tabs-header {
+    background-color: var(--main-colorschema-fg);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tabs-header > li {
+    color: var(--main-colorschema-bg);
+    cursor: pointer;
+    flex-grow: 1;
+    padding: .375rem;
+    font-size: 1.125rem;
+    width: 33%;
+    text-align: center;
+}
+
+.tabs-header > li.active {
+    background-color: #25283D;
+    color: #F4FAFF;
+}
+
+.tabs {
+    display: flex;
+}
+
+.tab {
+    padding: 1rem;
+    flex-direction: column;
 }
