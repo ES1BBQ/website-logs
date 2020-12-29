@@ -1,0 +1,48 @@
+@import url(https://fonts.googleapis.com/css?family=Quicksand);
+
+/**
+ * Color scheme
+ *
+ * Light (Cadet Gray): #93A3B1
+ * Dark (Rich Black FOGRA 29): #051923
+ * Red (Ruby Red): #A31621
+ * Green (Ao English): #157F1F
+ * Yellow (Maximum Yellow Red): #FFC857
+ */
+
+:root {
+    --main-colorschema-bg: #051923;
+    --main-colorschema-fg: #93A3B1;
+    --main-colorschema-red: #A31621;
+    --main-colorschema-green: #157F1F;
+    --main-colorschema-yellow: #FFC857;
+}
+
+/* General styles */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-colorschema-bg);
+    color: var(--main-colorschema-fg);
+    font-family: Quicksand, sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+a {
+    color: inherit;
+}

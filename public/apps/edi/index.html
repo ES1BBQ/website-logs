@@ -13,23 +13,47 @@
 
     <meta content='telephone=no' name='format-detection'>
 
+    <link href="/assets/css/edi.css" rel="stylesheet">
 </head>
 <body>
 
-    <div class="header centered">
-        <h1>EDI logirakendus</h1>
-        Kasutab veebilehitseja 'Local Storage't andmete talletamiseks
+<header class="centered">
+    <h1>EDI logirakendus</h1>
+    Infoks: Rakendus salvestab andmed kohaliku veebilehitsejasse.
+</header>
+
+<div class="wrapper">
+    <div class="tabs-container">
+        <ul class="tabs-header">
+            <li>Seadistused</li>
+            <li class="default-tab">Logi</li>
+            <li>Tulemus</li>
+        </ul>
+
+        <div class="tabs">
+
+        </div>
     </div>
+</div>
 
-    <script src="/assets/js/edi.js" type="application/javascript"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KQRD9B6RD8"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+<footer class="centered">
+    &copy; 2020 ES1BBQ
+</footer>
 
-        gtag('config', 'G-KQRD9B6RD8');
-    </script>
+
+<script src="/assets/js/edi.js" type="application/javascript"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KQRD9B6RD8"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-KQRD9B6RD8');
+</script>
 </body>
 </html>
