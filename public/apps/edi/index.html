@@ -36,7 +36,7 @@
             <section class="tab">
                 <div>
                     <label for="TDate">Kuupäev</label>
-                    <input id="TDate" type="date" placeholder="yyyy-mm-dd">
+                    <input id="TDate" placeholder="yyyy-mm-dd" type="date">
                 </div>
                 <div>
                     <label for="PSect">Klass:</label>
@@ -68,14 +68,15 @@
                     <input id="RName" type="text">
                 </div>
                 <div>
-                    <label for="PWWLo">Lokaator: <button id="locate_me">&#8982;</button></label>
+                    <label for="PWWLo">Lokaator:
+                        <button id="locate_me">&#8982;</button>
+                    </label>
                     <input id="PWWLo" style="text-transform:uppercase" type="text">
                 </div>
                 <div>
                     <label for="RCoun">Riik:</label>
                     <select id="RCoun">
-                        <option value="United States">United States</option>
-                        <option value="United Kingdom">United Kingdom</option>
+                        <option value="Estonia">Estonia</option>
                         <option value="Afghanistan">Afghanistan</option>
                         <option value="Albania">Albania</option>
                         <option value="Algeria">Algeria</option>
@@ -125,7 +126,8 @@
                         <option value="Colombia">Colombia</option>
                         <option value="Comoros">Comoros</option>
                         <option value="Congo">Congo</option>
-                        <option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of The</option>
+                        <option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of The
+                        </option>
                         <option value="Cook Islands">Cook Islands</option>
                         <option value="Costa Rica">Costa Rica</option>
                         <option value="Cote D'ivoire">Cote D'ivoire</option>
@@ -142,7 +144,7 @@
                         <option value="El Salvador">El Salvador</option>
                         <option value="Equatorial Guinea">Equatorial Guinea</option>
                         <option value="Eritrea">Eritrea</option>
-                        <option value="Estonia" selected>Estonia</option>
+                        <option value="Estonia">Estonia</option>
                         <option value="Ethiopia">Ethiopia</option>
                         <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
                         <option value="Faroe Islands">Faroe Islands</option>
@@ -187,7 +189,8 @@
                         <option value="Kazakhstan">Kazakhstan</option>
                         <option value="Kenya">Kenya</option>
                         <option value="Kiribati">Kiribati</option>
-                        <option value="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of</option>
+                        <option value="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of
+                        </option>
                         <option value="Korea, Republic of">Korea, Republic of</option>
                         <option value="Kuwait">Kuwait</option>
                         <option value="Kyrgyzstan">Kyrgyzstan</option>
@@ -273,7 +276,9 @@
                         <option value="Solomon Islands">Solomon Islands</option>
                         <option value="Somalia">Somalia</option>
                         <option value="South Africa">South Africa</option>
-                        <option value="South Georgia and The South Sandwich Islands">South Georgia and The South Sandwich Islands</option>
+                        <option value="South Georgia and The South Sandwich Islands">South Georgia and The South
+                            Sandwich Islands
+                        </option>
                         <option value="Spain">Spain</option>
                         <option value="Sri Lanka">Sri Lanka</option>
                         <option value="Sudan">Sudan</option>
@@ -302,7 +307,8 @@
                         <option value="United Arab Emirates">United Arab Emirates</option>
                         <option value="United Kingdom">United Kingdom</option>
                         <option value="United States">United States</option>
-                        <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+                        <option value="United States Minor Outlying Islands">United States Minor Outlying Islands
+                        </option>
                         <option value="Uruguay">Uruguay</option>
                         <option value="Uzbekistan">Uzbekistan</option>
                         <option value="Vanuatu">Vanuatu</option>
@@ -352,12 +358,12 @@
                 <!--- Logi --->
                 <div>
                     <div class="my_info">
-                        <div class="framed">
+                        <div>
                             Kutsung:
                             <div id="my_callsign"></div>
                             <div id="my_callsign_fonetic"></div>
                         </div>
-                        <div class="framed">
+                        <div>
                             Lokaator:
                             <div id="my_locator"></div>
                             <div id="my_locator_fonetic"></div>
@@ -370,17 +376,27 @@
                 </div>
                 <hr>
                 <div id="log_entry">
-                    <div>Time</div>
-                    <div>Callsign</div>
+                    <div>Aeg</div>
+                    <div>Kutsung</div>
                     <div>Mode</div>
-                    <div>Sent RST</div>
-                    <div>Locator</div>
-                    <div>Received RST</div>
+                    <div>Saadetud RST</div>
+                    <div>Lokaator</div>
+                    <div>Saadud RST</div>
                     <div></div>
                     <div><input autofocus class="short" id="log_time" type="text"></div>
                     <div><input class="short" id="log_callsign" maxlength="10"
                                 style="text-transform:uppercase" type="text"></div>
-                    <div><input class="short" id="log_mode" maxlength="1" placeholder="0-9" type="text"></div>
+                    <div>
+                        <select id="log_mode">
+                            <option value="0">Teadmata</option>
+                            <option value="1">SSB</option>
+                            <option value="2">CW</option>
+                            <option value="5">AM</option>
+                            <option value="6">FM</option>
+                            <option value="7">RTTY</option>
+                            <option value="8">SSTV</option>
+                        </select>
+                    </div>
                     <div><input class="short" id="log_tx_rst" maxlength="3" placeholder="59" type="text"></div>
                     <div><input class="short" id="log_loc" maxlength="6" style="text-transform:uppercase" type="text">
                     </div>
@@ -393,7 +409,12 @@
             </section>
             <section class="tab">
                 <!--- Tulemus --->
-
+                <div>
+                    <textarea id="finalEDI"></textarea>
+                </div>
+                <div>
+                    <a class="button" href="#" id="downloadEDI">Lae alla log.edi</a>
+                </div>
             </section>
             <section class="tab">
                 <!--- Juhend --->
@@ -407,19 +428,15 @@
     &copy; 2020 ES1BBQ
 </footer>
 
-
 <script src="/assets/js/edi.js" type="application/javascript"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KQRD9B6RD8"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
-
     function gtag() {
         dataLayer.push(arguments);
     }
-
     gtag('js', new Date());
-
     gtag('config', 'G-KQRD9B6RD8');
 </script>
 </body>
