@@ -91,4 +91,6 @@ header, footer {
 .tab {
     padding: 1rem;
     flex-direction: column;
+    width: 100%;
+    border: 1px solid var(--main-colorschema-fg);
 }
