@@ -142,3 +142,7 @@ label {
     width: 100%;
     border: 1px solid var(--main-colorschema-fg);
 }
+
+.tab > div {
+    text-align: center;
+}
