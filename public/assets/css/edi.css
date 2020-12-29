@@ -64,35 +64,33 @@ hr {
 /* Form */
 
 input, textarea, select, button, .button {
-    border: 1px solid var(--main-colorschema-fg);
-    color: var(--main-colorschema-fg);
-    width: 30em;
+    border: 1px solid var(--main-colorschema-bg);
+    color: var(--main-colorschema-bg);
+    background-color: var(--main-colorschema-fg);
+    width: 100%;
+    max-width: 30em;
     padding: 0.2rem;
     font-size: 0.9em;
-    -webkit-transition: .4s;
-    transition: .4s;
 }
 
 input::placeholder {
     color: #dddddd;
-    -webkit-transition: .4s;
-    transition: .4s;
 }
 
 input:disabled {
     color: #25283D;
-    -webkit-transition: .4s;
-    transition: .4s;
 }
 
 button, .button {
-    background-color: #748CAB;
-    color: #F4FAFF;
-    width: 15em;
+    background-color: var(--main-colorschema-fg);
+    color: var(--main-colorschema-bg);
+    width: 100%;
+    max-width: 15em;
 }
 
 textarea {
-    width: 50em;
+    width: 100%;
+    max-width: 50em;
     height: 30em;
 }
 
@@ -128,8 +126,8 @@ label {
 }
 
 .tabs-header > li.active {
-    background-color: #25283D;
-    color: #F4FAFF;
+    background-color: var(--main-colorschema-bg);
+    color: var(--main-colorschema-fg);
 }
 
 .tabs {
