@@ -63,6 +63,12 @@ hr {
 
 /* Form */
 
+label {
+    display: inline-flex;
+    width: 100%;
+    max-width: 20em;
+}
+
 input, textarea, select, button, .button {
     border: 1px solid var(--main-colorschema-bg);
     color: var(--main-colorschema-bg);
@@ -92,11 +98,6 @@ textarea {
     width: 100%;
     max-width: 50em;
     height: 30em;
-}
-
-label {
-    display: inline-flex;
-    width: 25%;
 }
 
 /* Tabs */
