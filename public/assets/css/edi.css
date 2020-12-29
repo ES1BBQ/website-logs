@@ -38,11 +38,25 @@ html, body {
 }
 
 body {
-    display: flex;
-    align-items: center;
     justify-content: center
 }
 
 a {
     color: inherit;
+    text-decoration: none;
+}
+
+header {
+    margin-bottom: 2em;
+}
+
+footer {
+    margin-top: 2em;
+}
+
+/* Wrapper and content */
+.wrapper {
+    width: 95%;
+    max-width: 950px;
+    margin: 0 auto;
 }
