@@ -149,27 +149,30 @@ textarea {
 
 /* My info */
 
-.my_info {
+#my_info {
     display: flex;
-    margin: 0 auto;
+    justify-content: center;
+    padding: 0.5em;
+    flex-wrap: wrap;
 }
 
-.my_info > div {
-    width: 35em;
-    max-width: 100%;
-    font-size: 0.8em;
-    padding: 1em;
+#my_info > div {
     border: 1px solid var(--main-colorschema-fg);
+    width: 25em;
+    margin:0.1em;
 }
 
 #my_callsign, #my_locator {
-    font-size: 5em;
+    font-size: 3em;
     font-weight: bolder;
 }
 
 #my_callsign_fonetic, #my_locator_fonetic {
-    font-size: 0.9em;
     font-weight: bolder;
     background-color: var(--main-colorschema-fg);
     color: var(--main-colorschema-bg);
+}
+
+#log_entry {
+    display: flex;
 }
