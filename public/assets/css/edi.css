@@ -173,6 +173,23 @@ textarea {
     color: var(--main-colorschema-bg);
 }
 
+/* Log entry */
+
 #log_entry {
+    display: flex;
+}
+
+#log_entry div {
+    width: 16%;
+}
+
+#log_entry input {
+    text-align: center;
+    font-weight: bold;
+}
+
+#log_entry div:nth-child(7n), #log .logRow div:nth-child(7n) {
+    width: 4%;
+    border: 0px;
     display: flex;
 }
