@@ -151,12 +151,14 @@ textarea {
 
 .my_info {
     display: flex;
+    margin: 0 auto;
 }
 
 .my_info > div {
     width: 35em;
     max-width: 100%;
-    font-size: 0.5em;
+    font-size: 0.8em;
+    padding: 1em;
     border: 1px solid var(--main-colorschema-fg);
 }
 
