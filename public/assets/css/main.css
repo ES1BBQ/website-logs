@@ -11,11 +11,18 @@
  */
 
 :root {
+    /* Light */
     --main-colorschema-bg: #F7F7FF;
     --main-colorschema-fg: #343434;
     --main-colorschema-red: #D52941;
     --main-colorschema-blue: #348AA7;
     --main-colorschema-yellow: #FFE66D;
+    /* Dark */
+    --dark-colorschema-bg: #1A1A1A;
+    --dark-colorschema-fg: #666666;
+    --dark-colorschema-red: #6B1420;
+    --dark-colorschema-blue: #1A4554;
+    --dark-colorschema-yellow: #B59700;
 }
 
 /* General */
@@ -45,6 +52,10 @@ body {
 
 a {
     color: inherit;
+}
+
+a:hover {
+    color: var(--main-colorschema-blue)
 }
 
 .right {
@@ -78,6 +89,7 @@ section > div {
 }
 
 footer {
+    padding-top: 1em;
     text-align: center;
 }
 
@@ -174,5 +186,21 @@ ul li {
 
     .right {
         text-align: center;
+    }
+}
+
+/* Make dark-mode reality */
+
+@media (prefers-color-scheme: dark) {
+    html, body {
+        background-color: var(--dark-colorschema-bg);
+        color: var(--dark-colorschema-fg);
+    }
+    .dark {
+        color: var(--dark-colorschema-bg);
+        background-color: var(--dark-colorschema-fg);
+    }
+    a:hover {
+        color: var(--dark-colorschema-blue)
     }
 }
