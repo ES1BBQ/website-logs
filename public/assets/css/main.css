@@ -67,6 +67,10 @@ a:hover {
     background-color: var(--main-colorschema-fg);
 }
 
+.nopadding {
+    padding: 0;
+}
+
 /* Content */
 
 section {
